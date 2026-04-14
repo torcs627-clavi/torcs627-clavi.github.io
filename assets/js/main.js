@@ -7,11 +7,14 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         navLinks.forEach((link) => {
-          link.classList.toggle(
-            'active',
-            link.getAttribute('href') === '#' + entry.target.id
-          );
+          link.classList.remove('active');
         });
+        const activeLink = document.querySelector(
+          '.nav-links a[href="#' + entry.target.id + '"]'
+        );
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
       }
     });
   },
