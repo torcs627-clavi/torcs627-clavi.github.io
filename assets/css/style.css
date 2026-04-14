@@ -498,6 +498,12 @@ section {
   grid-column: 1 / -1;
 }
 
+.articles-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* ===========================
    Contact Section
    =========================== */
