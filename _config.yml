@@ -1,0 +1,26 @@
+title: torcs627
+description: Personal homepage of torcs627
+url: "https://torcs627.github.io"
+baseurl: ""
+
+author:
+  name: torcs627
+  email: ""
+  github: torcs627
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
