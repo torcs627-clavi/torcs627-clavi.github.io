@@ -180,6 +180,37 @@ description: torcs627's personal homepage — developer, maker, and lifelong lea
   </div>
 </section>
 
+<!-- Articles -->
+<section id="articles">
+  <h2 class="section-title">Articles</h2>
+  <div class="articles-intro">
+    <p>
+      This section is powered by Jekyll posts. Add Markdown files under
+      <code>_posts/</code> and they will appear here automatically.
+    </p>
+  </div>
+  <div class="articles-grid">
+    {% if site.posts and site.posts.size > 0 %}
+      {% for post in site.posts limit: 6 %}
+      <article class="article-card">
+        <div class="article-meta">{{ post.date | date: "%b %d, %Y" }}</div>
+        <h3 class="article-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        {% if post.excerpt %}
+        <p class="article-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        {% endif %}
+        <a class="article-read-more" href="{{ post.url | relative_url }}">Read Article ↗</a>
+      </article>
+      {% endfor %}
+    {% else %}
+      <div class="articles-empty">
+        No articles yet. Create your first Markdown post in <code>_posts/</code>.
+      </div>
+    {% endif %}
+  </div>
+</section>
+
 <!-- Contact -->
 <div id="contact">
   <div class="contact-inner">

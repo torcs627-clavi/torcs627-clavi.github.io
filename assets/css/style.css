@@ -430,6 +430,75 @@ section {
 }
 
 /* ===========================
+   Articles Section
+   =========================== */
+
+.articles-intro p {
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.article-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.article-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px var(--shadow);
+}
+
+.article-meta {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 0.55rem;
+}
+
+.article-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.65rem;
+  line-height: 1.45;
+}
+
+.article-title a {
+  color: var(--text-primary);
+}
+
+.article-title a:hover {
+  color: var(--accent);
+}
+
+.article-excerpt {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.article-read-more {
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.articles-empty {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  color: var(--text-muted);
+  grid-column: 1 / -1;
+}
+
+/* ===========================
    Contact Section
    =========================== */
 
